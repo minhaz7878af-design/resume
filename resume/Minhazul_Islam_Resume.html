@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Minhazul Islam — AI Engineer</title>
+<style>
+  @page { size: A4; margin: 13mm 14mm 12mm 14mm; }
+
+  * { box-sizing: border-box; }
+
+  html {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 9.3pt;
+    line-height: 1.42;
+    color: #16181d;
+  }
+  body { margin: 0; }
+
+  /* ---------- header ---------- */
+  .name {
+    font-size: 20pt;
+    font-weight: 700;
+    letter-spacing: -0.4pt;
+    margin: 0 0 2pt;
+  }
+  .tagline {
+    font-size: 10.2pt;
+    font-weight: 600;
+    color: #1f3a8a;
+    margin: 0 0 5pt;
+  }
+  .contact {
+    font-size: 8.6pt;
+    color: #3d4249;
+    margin: 0 0 2pt;
+  }
+  .contact span + span::before { content: "  ·  "; color: #9aa1a9; }
+  .contact a { color: #3d4249; text-decoration: none; }
+  .status {
+    font-size: 8.6pt;
+    color: #3d4249;
+    margin: 4pt 0 0;
+    padding-top: 4pt;
+    border-top: 0.6pt solid #d7dbe0;
+  }
+  .status strong { color: #16181d; }
+
+  /* ---------- sections ---------- */
+  h2 {
+    font-size: 9.6pt;
+    font-weight: 700;
+    letter-spacing: 0.7pt;
+    text-transform: uppercase;
+    color: #1f3a8a;
+    margin: 11pt 0 4pt;
+    padding-bottom: 2pt;
+    border-bottom: 0.8pt solid #c3cbd6;
+    page-break-after: avoid;
+  }
+
+  /* keep blocks intact across page breaks */
+  .proj, .pub, .edu, .job-head, .pub-group, .plain { page-break-inside: avoid; }
+  p { margin: 0 0 4pt; }
+
+  /* ---------- skills ---------- */
+  .skills p { margin: 0 0 2.5pt; }
+  .skills b { color: #16181d; }
+
+  /* ---------- experience ---------- */
+  .job { margin-bottom: 7pt; }
+  .job-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8pt;
+  }
+  .job-title { font-size: 10.2pt; font-weight: 700; }
+  .job-title em { font-style: normal; font-weight: 600; color: #1f3a8a; }
+  .job-when { font-size: 8.7pt; font-weight: 600; color: #4a5057; white-space: nowrap; }
+  .job-sub { font-size: 8.7pt; color: #4a5057; margin: 1pt 0 3pt; }
+
+  .proj { margin: 0 0 5pt; }
+  .proj-name { font-weight: 700; font-size: 9.6pt; margin: 0 0 3pt; }
+  .proj-name em {
+    font-style: normal;
+    font-weight: 500;
+    color: #4a5057;
+    font-size: 8.7pt;
+  }
+
+  ul { margin: 0; padding-left: 11pt; }
+  li { margin: 0 0 2pt; }
+  li::marker { color: #1f3a8a; }
+
+  .tech {
+    font-size: 8.5pt;
+    color: #4a5057;
+    margin: 2.5pt 0 0;
+  }
+  .tech b { color: #16181d; }
+
+  /* ---------- publications ---------- */
+  .pub-group { font-weight: 700; font-size: 8.9pt; margin: 3pt 0 2pt; }
+  .pub { margin: 0 0 3pt; padding-left: 11pt; text-indent: -11pt; }
+  .pub .venue { color: #4a5057; }
+  .pub .doi { color: #4a5057; }
+
+  /* ---------- education ---------- */
+  .edu {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8pt;
+    margin-bottom: 3pt;
+  }
+  .edu-deg { font-weight: 700; }
+  .edu-deg span { font-weight: 500; color: #1f3a8a; }
+  .edu-when { font-size: 8.7pt; color: #4a5057; white-space: nowrap; }
+
+  .plain { margin: 0 0 3pt; }
+  .award-title { font-weight: 700; }
+</style>
+</head>
+<body>
+
+  <header>
+    <h1 class="name">Minhazul Islam</h1>
+    <p class="tagline">AI Engineer — Agentic AI, LLM Systems &amp; Full-Stack Development</p>
+    <p class="contact">
+      <span>Ningbo, Zhejiang, China</span>
+      <span>+86 159 9025 9205</span>
+      <span><a href="mailto:minhazulislam2858@gmail.com">minhazulislam2858@gmail.com</a></span>
+      <span><a href="mailto:minhaz1396@zju.edu.cn">minhaz1396@zju.edu.cn</a></span>
+    </p>
+    <p class="contact">
+      <span><a href="https://github.com/Minhaz2858">github.com/Minhaz2858</a></span>
+      <span><a href="https://www.linkedin.com/in/minhazul-islam-43b3a4221/">linkedin.com/in/minhazul-islam-43b3a4221</a></span>
+      <span><a href="https://scholar.google.com/citations?hl=en&amp;view_op=search_authors&amp;mauthors=Minhazul+Islam">Google Scholar</a></span>
+    </p>
+    <p class="status">
+      <strong>Open to full-time AI/ML engineering roles</strong> — Shanghai or remote · 2026–2027 ·
+      currently on a student visa, eligible for work-permit conversion after graduation (Dec 2026) ·
+      English (fluent) · Mandarin Chinese (working proficiency) · Bengali (native)
+    </p>
+  </header>
+
+  <h2>Summary</h2>
+  <p>
+    AI engineer with 2+ years building production agentic AI systems end-to-end — LangGraph multi-agent
+    architectures, RAG infrastructure, Dockerized deployment, and streaming APIs. Solo-built EDIA, a 17-node
+    decision-intelligence platform serving 19 petrochemical products in live forecast use, cutting decision
+    latency from 90–478s to 30–45s with zero LLM-computed numbers reaching users. Also built Zhanlu, a
+    multi-tenant governed agent runtime with a 144-tool registry, MCP integration, and Docker sandboxing.
+    M.Eng. candidate at Zhejiang University with 2 peer-reviewed papers (ICEC 2025) and 2 conference
+    presentations (HHME 2026 PCC).
+  </p>
+
+  <h2>Technical Skills</h2>
+  <div class="skills">
+    <p><b>LLM &amp; Agent Systems:</b> LangGraph (17-node FSM), multi-agent orchestration, Model Context Protocol (MCP), sub-agent delegation, tool/skill registry design, LLM-as-a-judge evaluation, prompt &amp; context engineering</p>
+    <p><b>RAG &amp; Data Grounding:</b> hybrid vector + SQL retrieval, ChromaDB, BAAI/bge-m3 embeddings, context budgeting, semantic memory, NL2SQL pipelines, output validation &amp; guardrails</p>
+    <p><b>Backend &amp; Infrastructure:</b> FastAPI, SSE streaming, PostgreSQL, Redis, MySQL, MinIO, Docker, Nginx, systemd, JWT auth, Prometheus/Grafana, GitHub Actions CI/CD</p>
+    <p><b>ML &amp; Forecasting:</b> PyTorch, Transformers, XGBoost, ARIMA/LSTM/STL ensembles, walk-forward MAPE backtesting, local inference (vLLM, Ollama, Qwen), multi-provider model routing</p>
+    <p><b>Languages &amp; Tools:</b> Python (asyncio), C/C++, SQL, JavaScript, React, Git, Autodesk Inventor / Fusion 360 API</p>
+    <p><b>Research Methods:</b> user studies (N=24 within-subjects), usability evaluation (SUS), qualitative interview studies, systematic reviews</p>
+  </div>
+
+  <h2>Experience</h2>
+
+  <div class="job">
+    <div class="job-head">
+      <div class="job-title">AI Infrastructure Engineer (Intern) — <em>Synexia AI</em></div>
+      <div class="job-when">2025 – 2026</div>
+    </div>
+    <p class="job-sub">Zhejiang, China · Solo-built two production AI platforms: EDIA (enterprise decision intelligence) and Zhanlu (governed multi-agent runtime).</p>
+
+    <div class="proj">
+      <p class="proj-name">EDIA — Enterprise Decision Intelligence Agent <em>(17-node LangGraph FSM · 15 agents · 57 skills · 19 products)</em></p>
+      <ul>
+        <li>Architected a 17-node LangGraph state machine orchestrating 15 specialized agents and 57 atomic skills across 5 execution tiers — conditional routing, parallel branches, sequential quality gates, and persistent multi-turn session state.</li>
+        <li>Eliminated numerical hallucination architecturally: a deterministic pre-rendering pipeline computes and locks every business-critical metric in Python before any LLM narration, with a validation engine enforcing exact-value compliance and strict source attribution.</li>
+        <li>Cut end-to-end decision latency from 90–478s to 30–45s by fusing ChromaDB vector search with 38 SQL views mapped to 19 products — SQL round-trips dropped from 77 to 2–5 and fetched rows from 180K to ~200. Every result is an immutable checksummed snapshot cited by ID, so live database credentials never reach LLM context.</li>
+        <li>Deployed multi-horizon forecasting (ARIMA + XGBoost + LSTM + STL ensemble) with walk-forward MAPE backtesting and an Honesty Gate that auto-downgrades to conservative forecasts when model uncertainty exceeds thresholds (best-case MAPE 1.4%).</li>
+        <li>Operated the platform in production on FastAPI + Nginx + systemd with SSE streaming and JWT auth, behind a dual-LLM security architecture in which a local Qwen model sanitizes ERP data before any external provider receives a briefing.</li>
+      </ul>
+      <p class="tech"><b>Tech:</b> LangGraph · FastAPI · ChromaDB · PyTorch · XGBoost · statsmodels · Docker · nginx · SSE · MySQL · Redis</p>
+    </div>
+
+    <div class="proj">
+      <p class="proj-name">Zhanlu — Enterprise AI Agent Infrastructure <em>(144-tool registry · MCP client/server · Docker sandboxing)</em></p>
+      <ul>
+        <li>Built a multi-tenant runtime for governed, tool-using AI agents: permission-filtered dispatch over a 144-tool registry, MCP client/server integration with OAuth, provider-health tracking with circuit-breaking, fallback routing, and encrypted key storage.</li>
+        <li>Shipped Docker-sandboxed execution for Python, PPTX, web-app, and office-document workloads — per-task images with enforced memory, CPU, process, output, and wall-clock limits, isolated so sandbox artifacts never touch raw data-source credentials.</li>
+        <li>Designed capability-based data intelligence (intent → source discovery → GroundedPlan → SQL compilation → CanonicalResultSet), backed by deterministic temporal interpretation, metric contracts, unit validation, and source provenance.</li>
+        <li>Implemented pre-call context-budget enforcement (token estimation, hierarchical history compaction, semantic deduplication, externalization of oversized tool results), eliminating context-overflow failures across differing model context limits.</li>
+        <li>Built the evaluation layer: regression scenarios for source selection, temporal interpretation, SQL semantics, authorization, and tool-loop limits; deterministic artifact validation; LLM-as-judge quality gates; and full execution traces covering model calls, tools, retries, latency, tokens, and policy decisions.</li>
+      </ul>
+      <p class="tech"><b>Tech:</b> LangGraph · FastAPI · React · PostgreSQL · Redis · MinIO · Docker · MCP · OpenTelemetry · pytest · GitHub Actions</p>
+    </div>
+  </div>
+
+  <div class="job">
+    <div class="job-head">
+      <div class="job-title">Software Automation Engineer — <em>ProFabx</em></div>
+      <div class="job-when">Jun 2024 – Sep 2024</div>
+    </div>
+    <p class="job-sub">Ningbo, China</p>
+    <ul>
+      <li>Programmed custom Python drivers against the Autodesk Inventor API (win32com.client) to automate dynamic 3D CAD modeling, cutting engineering iteration time for custom fabrications.</li>
+      <li>Built a lightweight web interface (JavaScript, Python) enabling real-time parametric model updates driven directly by client specification changes.</li>
+    </ul>
+    <p class="tech"><b>Tech:</b> Python · Autodesk Inventor API · win32com.client · JavaScript · Fusion 360</p>
+  </div>
+
+  <h2>Publications</h2>
+  <p class="pub-group">Peer-reviewed</p>
+  <p class="pub">M. Islam, M. Xue, T. Afra. <b>Exploring Psychologist-Applied Biomarkers in Bipolar Disorder: A Systematic Framework.</b> <span class="venue">Springer LNCS — Entertainment Computing (ICEC 2025), Tokyo, Japan. pp. 61–75.</span> <span class="doi">doi:10.1007/978-3-032-02534-0_8</span></p>
+  <p class="pub">T. Afra, M. Xue, M. Islam. <b>Enhancing Biofeedback Interventions for Depression and Anxiety Through Entertainment Computing: A Systematic Review.</b> <span class="venue">Springer LNCS — Entertainment Computing (ICEC 2025), Tokyo, Japan. pp. 37–51.</span> <span class="doi">doi:10.1007/978-3-032-02534-0_6</span></p>
+  <p class="pub-group">Conference presentations (non-archival)</p>
+  <p class="pub">M. Islam, M. Xue, T. Afra. <b>BEPSBot: A Dual-Mode Writing Assistant for Peer Support in Bipolar Disorder Communities.</b> <span class="venue">HHME 2026 PCC, Oral Presentation, Zhejiang University.</span> <span class="doi">N=24 within-subjects study; suggestion adoption 33.3% → 75.6%; SUS 86.98.</span></p>
+  <p class="pub">T. Afra, M. Xue, M. Islam. <b>How Should Voice Agents Respond to Anger and Sadness? A Comparison of Empathic Response, Affect-Neutral Acknowledgment, and Cognitive Reappraisal.</b> <span class="venue">HHME 2026 PCC, Oral Presentation, Zhejiang University.</span></p>
+
+  <h2>Education</h2>
+  <div class="edu">
+    <div class="edu-deg">M.Eng. in Industrial Design Engineering — <span>Zhejiang University</span></div>
+    <div class="edu-when">Sep 2023 – Dec 2026 (Expected) · Zhejiang, China</div>
+  </div>
+  <div class="edu">
+    <div class="edu-deg">B.Eng. in Computer Science and Technology — <span>Yunnan University</span></div>
+    <div class="edu-when">Sep 2019 – Jun 2023 · Kunming, China</div>
+  </div>
+
+  <h2>Certifications</h2>
+  <p class="plain">IBM × 3 · DeepLearning.AI × 1 (2025) — LLM lifecycle, PEFT/LoRA &amp; RLHF, transformer fine-tuning, and containerized generative-AI applications.</p>
+
+  <h2>Awards</h2>
+  <p class="plain"><span class="award-title">United Nations Technology Bank — Global Youth Talent Program, 2023.</span> Selected for an international design-education initiative focused on technology, design, and sustainable development.</p>
+
+</body>
+</html>

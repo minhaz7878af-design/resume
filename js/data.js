@@ -7,152 +7,129 @@ window.PORTFOLIO = {
   profile: {
     name: "Minhazul Islam",
     monogram: "MI",
-    title: "AI Systems Researcher",
-    roleLine: "Trustworthy Agentic AI · Human-AI Interaction · Verifiable AI Systems",
+    title: "AI Engineer",
+    roleLine: "Agentic AI · LLM Systems · Applied Machine Learning",
+    headline: "AI Engineer — Agentic AI, LLM Systems & Applied Machine Learning",
+    kicker: "M.Eng. Candidate, Zhejiang University · B.Eng., Yunnan University",
+    availability: "Open to full-time AI/ML engineering roles · Shanghai or remote · 2026–2027",
+    workAuth:
+      "Currently on a student visa · eligible for work-permit conversion after graduation (Dec 2026)",
+    languages: "English (fluent) · Mandarin Chinese (working proficiency) · Bengali (native)",
     location: "Ningbo, Zhejiang, China",
     email: "minhaz1396@zju.edu.cn",
     phone: "+86 15990259205",
     github: "https://github.com/Minhaz2858",
     linkedin: "https://www.linkedin.com/in/minhazul-islam-43b3a4221/",
-    cv: "assets/Islam_Minhazul_CV.pdf",
+    scholar: "https://scholar.google.com/citations?hl=en&view_op=search_authors&mauthors=Minhazul+Islam",
+    cv: "assets/Minhazul_Islam_Resume.pdf",
     photo: "assets/profile.jpg",
     summary:
-      "AI Systems Researcher (M.Eng. candidate, Zhejiang University) working at the intersection of trustworthy agentic AI, grounded decision intelligence, and human-AI interaction. I build and study agentic systems that make complex decisions through structured planning, grounded tool use, verification, and human oversight — spanning enterprise decision intelligence and AI-mediated mental-health communication.",
+      "I build production AI systems end-to-end — from multi-agent LLM architectures and RAG infrastructure to Dockerized deployment and streaming APIs. At Synexia AI I shipped EDIA, a 17-node LangGraph decision-intelligence platform covering 19 petrochemical products, and Zhanlu, a governed multi-agent runtime with 144 registered tools and sandboxed execution. My master's thesis, BEPSBot, applied the same systems thinking to a sensitive domain: a draft-grounded AI writing assistant for mental-health peer support, validated in a 24-participant study.",
+    howIWork:
+      "I believe LLMs should narrate, never calculate — so I build deterministic guardrails, verified tool pipelines, and human oversight into every system, from enterprise forecasting to mental-health communication.",
     bio: [
-      "I combine algorithmic capability with engineering rigor and user understanding to drive AI products through the full lifecycle — from model research to system deployment.",
-      "My work spans multi-agent LLM orchestration for production decision-intelligence platforms, retrieval-augmented generation systems for mental-health support, Transformer fine-tuning for domain-specific scoring, and embedded AI prototypes for accessibility.",
-      "I enjoy solving problems where the answer requires both deep technical work and a clear view of the user: grounding LLMs in evidence, making AI output verifiable, and shipping systems that perform under real load.",
-    ],
-    pillars: [
-      { title: "Human-AI Co-Decision & HCI", desc: "Empirical research on peer-support writing assistance in mental-health communities, biofeedback interventions, and affective computing — published at ICEC 2025 and HHME 2026 PCC." },
-      { title: "Multi-Agent Orchestration & Harness Runtime", desc: "State-machine execution (17-node LangGraph FSMs), plan-first turn planning, sub-agent delegation, and custom Harness Agent runtimes with Model Context Protocol (MCP) bridges." },
-      { title: "Context Engineering & Grounded RAG", desc: "Hybrid retrieval (ChromaDB vector search + structured SQL data grounding), context budget enforcement with payload spill management, and long-term semantic memory." },
-      { title: "Governance-First System Safety", desc: "Deterministic Python validation layers that pre-compute and lock business-critical data before LLM narration — eliminating a class of numerical hallucination by pre-rendering metrics." },
-      { title: "Sandboxed Execution & LLMOps", desc: "Docker-isolated skill execution (sandbox-python, sandbox-pptx), LLM-as-a-judge blocking quality gates, multi-provider model routing, and SSE streaming APIs." },
-    ],
-    rsToolkit: [
-      { domain: "Orchestration & Runtimes", tools: "LangGraph, Custom Synexia FSM, Harness Agent Runtimes, Model Context Protocol (MCP), ReAct / CoT Planning" },
-      { domain: "Context & Retrieval Infra", tools: "Hybrid Vector + SQL RAG, ChromaDB, BAAI/bge-m3, Context Budgeting, Context Compaction" },
-      { domain: "Validation & Evaluation", tools: "Deterministic Python Guardrails, Pre-rendering, LLM-as-a-Judge Audit Gates, Walk-Forward MAPE Backtesting" },
-      { domain: "Production LLMOps & Infra", tools: "Docker Microservices (14-service stacks), FastAPI, Redis, MinIO, SSE Streaming, Prometheus/Grafana" },
-      { domain: "Machine Learning & NLP", tools: "PyTorch, Hugging Face Transformers, PEFT/LoRA, STL + Time-Series Ensembles, RoBERTa / BERT Fine-Tuning" },
-      { domain: "Edge AI & Embedded HCI", tools: "Arduino, C/C++, ESP32-CAM, Sensor Fusion, Edge AI Prototyping" },
+      "I'm an M.Eng. candidate at Zhejiang University (Industrial Design Engineering) with a B.Eng. in Computer Science from Yunnan University. Over the past two years I've worked as an AI Infrastructure & Systems Engineer at Synexia AI, where I built two production platforms from the ground up.",
+      "EDIA pre-computes every business-critical metric in deterministic Python before any LLM narrates it, cutting decision-workflow latency from up to 478 seconds down to 30–45 seconds. Zhanlu is a multi-tenant platform for governed, tool-using AI agents, with permission-filtered tool dispatch, Docker-sandboxed execution, MCP integrations, and full audit trails.",
+      "Alongside engineering, I conduct human-centered AI research. My thesis, BEPSBot (HHME 2026 PCC), showed that draft-grounded generation more than doubled suggestion adoption (33.3% → 75.6%) while preserving usability (SUS 86.98) — published alongside two ICEC 2025 papers on bipolar-disorder biomarkers and biofeedback interventions.",
+      "I'm looking for engineering roles where I can own LLM and agent systems from architecture to deployment, in domains where correctness and trust matter.",
     ],
     stats: [
       { num: "0", label: "LLM-computed numbers reaching users (EDIA — LLM narrates, never calculates)" },
       { num: "17", label: "node LangGraph FSM orchestrator (EDIA)" },
       { num: "5m→30s", label: "end-to-end decision latency — 90–478s → 30–45s (EDIA)" },
-      { num: "2+2", label: "peer-reviewed papers + conference presentations (ICEC 2025, HHME 2026 PCC)" },
+      { num: "2+2", label: "peer-reviewed papers (ICEC 2025) + conference presentations (HHME 2026 PCC)" },
     ],
   },
 
   skills: [
     {
-      category: "Multi-Agent Systems & Agent Runtimes",
+      category: "LLM & Agent Systems",
       items: [
-        "LangGraph (17-Node FSM)", "Agent Harness", "Model Context Protocol (MCP)",
-        "Plan-First Turn Planning", "Sub-Agent Workflows", "Goal Contracts & Self-Correction",
-        "Control & Observability Layer", "LLM-as-a-Judge Eval", "Tool/Skill/MCP Gateway",
+        "LangGraph (17-Node FSM)", "Multi-Agent Orchestration", "Model Context Protocol (MCP)",
+        "Plan-First Turn Planning", "Sub-Agent Delegation", "Tool / Skill Registry Design",
+        "LLM-as-a-Judge Evaluation", "Prompt & Context Engineering",
       ],
     },
     {
-      category: "Context Engineering & Retrieval Infrastructure",
+      category: "RAG & Data Grounding",
       items: [
-        "Context Budget & Spill Management", "Hybrid Vector + SQL RAG", "ChromaDB / BAAI/bge-m3 Embeddings",
-        "Deterministic Guardrails", "Output Validation", "Context Trimming & Isolation",
+        "Hybrid Vector + SQL Retrieval", "ChromaDB", "BAAI/bge-m3 Embeddings",
+        "Context Budgeting & Spill Management", "Semantic Memory", "NL2SQL Pipelines",
+        "Output Validation & Guardrails",
       ],
     },
     {
-      category: "AI Infrastructure & LLMOps",
+      category: "Backend & Infrastructure",
       items: [
-        "Docker Stack (14 Services)", "FastAPI / SSE Streaming", "Local vLLM (Qwen3-27B) / Ollama",
-        "Redis Queues / Lock / SSE", "PostgreSQL / MinIO Storage", "Prometheus & Grafana Observability",
-        "Multi-Provider Routing", "Dual-LLM Security Gates", "Systemd / Nginx / Auto-Recovery",
+        "FastAPI", "SSE Streaming", "PostgreSQL", "Redis (Queues / Locks)",
+        "MySQL", "MinIO", "Docker (14-Service Stacks)", "Nginx", "Systemd",
+        "JWT Auth", "Prometheus / Grafana", "GitHub Actions CI/CD",
       ],
     },
     {
-      category: "Languages & AI Development Tools",
+      category: "ML & Forecasting",
       items: [
-        "Python (Asyncio)", "C / C++", "SQL / JavaScript",
-        "PyTorch / Transformers", "Git / GitHub Actions CI/CD",
+        "PyTorch", "Transformers", "XGBoost", "ARIMA / LSTM / STL Ensembles",
+        "Walk-Forward Backtesting (MAPE)", "Local Inference (vLLM, Ollama, Qwen)",
+        "Multi-Provider Model Routing",
+      ],
+    },
+    {
+      category: "Languages & Tools",
+      items: [
+        "Python (Asyncio)", "C / C++", "SQL", "JavaScript", "React", "Git",
+        "Autodesk Inventor / Fusion 360 API",
+      ],
+    },
+    {
+      category: "Research Methods",
+      items: [
+        "User Studies (N=24 Within-Subjects)", "Usability Evaluation (SUS)",
+        "Qualitative Interview Studies", "Systematic Reviews",
       ],
     },
   ],
 
   experience: [
     {
-      role: "AI Infrastructure & Systems Engineer (Internship)",
+      role: "AI Infrastructure Engineer (Intern)",
       company: "Synexia AI",
       period: "2025 – 2026",
       location: "Zhejiang, China",
+      summary:
+        "Solo-built two production AI platforms — EDIA (enterprise decision intelligence) and Zhanlu (governed multi-agent runtime).",
       projects: [
         {
-          name: "Project 1: EDIA — Enterprise Decision Intelligence Agent",
+          name: "EDIA — Enterprise Decision Intelligence Agent",
+          meta: "17-node LangGraph FSM · 15 agents · 57 skills · 19 products in live forecast coverage",
+          collapsed: false,
           points: [
-            "Petrochemical decision-intelligence system. 17-node LangGraph FSM + Hermes control plane. 19 products in live forecast coverage.",
-            "H::Multi-Agent Orchestration & Control Plane",
-            "Architected a 17-node LangGraph state machine with conditional routing, parallel execution branches, and persistent multi-turn session state.",
-            "Built Hermes, a request-level control plane that constructs a structured execution plan per query, enforces verified-skill-only dispatch, and selects privacy policy (local-only vs. external) based on data sensitivity.",
-            "Designed a 5-tier agent architecture: 15 specialized agents across data ingestion, pre-rendering, analysis, decision, and interface layers, managing 57 atomic skills with ownership mapping.",
-            "H::Deterministic Guardrail & Pre-Rendering Pipeline",
-            "Eliminated numerical hallucinations by pre-computing and locking all business-critical metrics in pure Python before any LLM narration — the LLM receives a deterministic JSON payload, never raw data.",
-            "H::Hybrid RAG & Data Infrastructure",
-            "Fused ChromaDB vector search (8 collections, BAAI/bge-m3 embeddings) with structured SQL views (38+ views mapped to 19 products) for grounded retrieval of market intelligence and ERP historical data.",
-            "Implemented a DataSnapshot layer: every query result is immutable, checksummed, and cited by ID in generated artifacts — live DB credentials never reach the LLM context.",
-            "H::Forecasting MLOps",
-            "Deployed a multi-horizon ensemble (ARIMA + XGBoost + LSTM + STL) with dynamic weight adjustment based on market regime and diagnosis signal.",
-            "Built walk-forward MAPE backtesting with locked baselines, adaptive bias correction, and an Honesty Gate that auto-downgrades to conservative forecasts when model uncertainty exceeds thresholds.",
-            "Reduced end-to-end decision-workflow latency from 90–478s to 30–45s via intent-driven query planning and parallel SQL fetching.",
-            "H::Production Operations",
-            "Deployed on FastAPI + Nginx + systemd with SSE streaming endpoints, JWT auth, and health monitoring.",
-            "Ran on a dual-LLM security architecture: local Qwen 3.5 (A10 GPU, Ollama) sanitizes sensitive ERP data before any external model receives a briefing.",
+            "Architected a 17-node LangGraph state machine orchestrating 15 specialized agents and 57 atomic skills across 5 execution tiers — conditional routing, parallel branches, sequential quality gates, and persistent multi-turn session state.",
+            "Eliminated numerical hallucination architecturally: a deterministic pre-rendering pipeline computes and locks every business-critical metric in Python before any LLM narration, with a validation engine enforcing exact-value compliance and strict source attribution.",
+            "Cut end-to-end decision latency from 90–478s to 30–45s by fusing ChromaDB vector search with 38 SQL views mapped to 19 products — SQL round-trips dropped from 77 to 2–5 and fetched rows from 180K to ~200. Every result is an immutable, checksummed snapshot cited by ID, so live database credentials never reach the LLM context.",
+            "Deployed multi-horizon forecasting (ARIMA + XGBoost + LSTM + STL ensemble) with walk-forward MAPE backtesting and an Honesty Gate that auto-downgrades to conservative forecasts when model uncertainty exceeds thresholds. Best-case MAPE 1.4%.",
+            "Operated the platform in production on FastAPI + Nginx + systemd with SSE streaming and JWT auth, behind a dual-LLM security architecture in which a local Qwen model sanitizes ERP data before any external provider receives a briefing.",
             "Tech: LangGraph · FastAPI · ChromaDB · PyTorch · XGBoost · statsmodels · Docker · nginx · SSE · MySQL · Redis",
           ],
         },
         {
-          name: "Project 2: Zhanlu — Enterprise AI Agent Infrastructure",
+          name: "Zhanlu — Enterprise AI Agent Infrastructure",
+          meta: "Governed agent runtime · 144-tool registry · MCP client/server · Docker sandboxing",
+          collapsed: true,
           points: [
-            "Multi-tenant platform for building and operating governed, tool-using AI agents.",
-            "Developed as a solo AI Platform Engineering project during my internship at Synexia AI.",
-            "H::Agent Harness and Runtime",
-            "Built the custom Synexia FSM for structured plan, act, observe, and verification stages, with iteration budgets, goal contracts, tool-loop detection, persistent execution state, and deterministic confidence scoring.",
-            "Implemented pre-call context-budget controls that estimate token usage, compact conversation history, and externalize oversized tool results to reduce context-overflow failures across different model limits.",
-            "Designed a persisted Plan DAG representation for typed tool, skill, NL2SQL, and sandbox nodes. Approved nodes currently execute serially; general parallel DAG execution remains future work.",
-            "Implemented checkpoint-based recovery for programmatic and delegated agent runs. The primary conversational path currently uses a separate runtime loop.",
-            "H::Dynamic Data Intelligence",
-            "Designed a capability-based architecture in which the harness exposes authorized SourceDescriptors, while the active agent determines which sources and tools are relevant to the request.",
-            "Eliminated implicit default-database selection, first-source fallback, keyword-to-source routing, source-specific business rules, and automatic query-all behavior.",
-            "Built the structured execution path:",
-            "Intent → Source Discovery → Candidate Tables → GroundedPlan → SQL Compilation and Validation → Database Execution → CanonicalResultSet",
-            "Added deterministic temporal interpretation, metric contracts, unit validation, result-grain controls, and source provenance for grounded business-data answers.",
-            "Designed cross-agent consistency around the invariant that the same semantic request, authorized source scope, and temporal context should produce the same grounded plan and canonical result.",
-            "H::Tool Registry and MCP Integration",
-            "Built a decorator-based tool registry with function-schema normalization and role-aware tool filtering. At a specific verified revision, the registry contained 144 tool definitions.",
-            "Implemented MCP client and server integrations with mediated external-tool access and OAuth support.",
-            "Added provider-health tracking, circuit-breaker behavior, fallback routing, and encrypted provider-key storage.",
-            "Developed a CAD Agent that controls Autodesk Fusion 360 through an MCP-compatible bridge using typed parametric modeling operations and geometry validation.",
-            "H::Sandboxed Execution and Security",
-            "Architected task-specific Docker sandbox images for Python, PPTX, web application, and office-document workloads, with configured memory, CPU, process, output, and execution-time limits.",
-            "Isolated sandbox job submission through a worker and Redis-backed queue and event flow.",
-            "Designed datasource-mediated execution so sandboxed artifact workflows can operate on controlled data inputs without receiving raw datasource credentials.",
-            "Implemented tool allowlists and denylists, policy decisions, tenant-aware resource scope, and append-only audit records for structured harness execution.",
-            "Full-stack dashboard generation currently runs inside the backend service and remains an isolation exception.",
-            "H::Evaluation and Output Verification",
-            "Built regression scenarios for source selection, temporal interpretation, SQL semantics, authorization, tool-loop limits, result consistency, and failure recovery.",
-            "Implemented automated artifact-quality checks using deterministic validation and LLM-assisted rubric evaluation.",
-            "Outputs that fail configured artifact checks can be withheld or marked as failed; LLM-based evaluation is treated as a quality signal rather than proof that an artifact contains no hallucinations.",
-            "Added execution traces covering model calls, tool activity, retries, latency, token usage, policy decisions, and run status.",
-            "Verification currently records quality and confidence signals; a complete automatic reflection and replanning loop remains future work.",
-            "H::Context Engineering and Memory",
-            "Implemented hierarchical history compaction and semantic deduplication to control repeated or low-value context.",
-            "Built tiered tool-result handling with per-result caps, external storage for oversized payloads, and pointer-based replacement inside model context.",
-            "Added project-scoped memory, semantic retrieval, and embedding-backed knowledge access.",
-            "Used progressive capability disclosure so agents receive relevant tool and skill summaries without loading the complete catalog into every prompt.",
+            "Built a multi-tenant runtime for governed, tool-using AI agents: permission-filtered dispatch over a 144-tool registry, MCP client/server integration with OAuth, provider-health tracking with circuit-breaking, fallback routing, and encrypted key storage.",
+            "Shipped Docker-sandboxed execution for Python, PPTX, web-app, and office-document workloads — per-task images with enforced memory, CPU, process, output, and wall-clock limits, submitted through Redis queues and event streams, isolated so sandbox artifacts never touch raw data-source credentials.",
+            "Designed capability-based data intelligence (intent → source discovery → GroundedPlan → SQL compilation → CanonicalResultSet) that removed implicit default-database selection and keyword-to-source routing, backed by deterministic temporal interpretation, metric contracts, unit validation, and source provenance.",
+            "Implemented pre-call context-budget enforcement — token estimation, hierarchical history compaction, semantic deduplication, and externalization of oversized tool results — eliminating context-overflow failures across differing model context limits.",
+            "Built the evaluation layer: regression scenarios for source selection, temporal interpretation, SQL semantics, authorization, tool-loop limits, and failure recovery, plus deterministic artifact validation, LLM-as-judge quality gates, and full execution traces covering model calls, tools, retries, latency, tokens, and policy decisions.",
+            "Developed a CAD Agent controlling Autodesk Fusion 360 through an MCP-compatible bridge with typed parametric modeling operations and geometry validation.",
+            "Hardened the platform with tool allow/deny lists, policy decisions, tenant-aware resource scoping, and append-only audit records.",
+            "Tech: LangGraph · FastAPI · React · PostgreSQL · Redis · MinIO · Docker · MCP · OpenTelemetry · pytest · GitHub Actions",
           ],
         },
       ],
       tech: [
-        "FastAPI", "React", "PostgreSQL", "Redis", "MinIO", "Docker",
+        "FastAPI", "PostgreSQL", "Redis", "MinIO", "Docker",
         "LangGraph", "ChromaDB", "OpenTelemetry", "pytest", "GitHub Actions",
       ],
     },
@@ -1110,6 +1087,20 @@ def recommend_candidates(req):
             <p class="pd-lead">Open limitations: 24 participants limits generalizability; 3 sessions captures only early-stage adaptation; RE relies on retrieval-based exemplars (not generative). Future work should also examine how support <em>recipients</em> perceive AI-assisted peer responses in terms of authenticity, trust, and emotional impact.</p>
           `,
         },
+        {
+          title: "Limitations & Next Research Questions",
+          body: `
+            <p class="pd-lead">Stated plainly: a successful prototype is not the same thing as a validated scientific conclusion.</p>
+            <h3 class="pd-subh">Limitations</h3>
+            <p>The current study evaluates provider-side adoption and usability in a controlled setting; it does not establish downstream benefit to support recipients, long-term safety, or whether semantic fidelity is consistently preserved. The sample (N=24, within-subjects, three writing tasks) captures early-stage adaptation rather than sustained use, and the evaluation measures adoption and usability — not recipient outcomes.</p>
+            <h3 class="pd-subh">Next research questions</h3>
+            <ul>
+              <li><b>Measurement:</b> How should semantic preservation be measured — and validated — when AI transforms a person's own draft?</li>
+              <li><b>Authenticity:</b> When does AI polishing reduce perceived authenticity, and how do recipients (not just authors) detect and value it?</li>
+              <li><b>Longitudinal evaluation:</b> How can recipient outcomes and safety be evaluated longitudinally in live peer-support communities, under appropriate ethical oversight?</li>
+            </ul>
+          `,
+        },
       ],
       links: [
         { label: "GitHub", url: "https://github.com/Minhaz2858/Bepsbot", external: true },
@@ -1476,8 +1467,11 @@ def recommend_candidates(req):
     {
       id: "C.1",
       title: "Exploring Psychologist-Applied Biomarkers in Bipolar Disorder: A Systematic Framework",
+      short: "Psychologist-applied biomarkers in bipolar disorder: a systematic framework",
+      badge: "ICEC 2025",
+      authorsShort: "M. Islam, M. Xue, T. Afra",
       venue: "Entertainment Computing – ICEC 2025 IFIP TC 14 Workshops: Tokyo, Japan, August 27–30, 2025, Proceedings",
-      venueShort: "ICEC 2025 · Tokyo, Japan · Aug 2025",
+      venueShort: "Springer LNCS · ICEC 2025 · Tokyo, Japan",
       type: "conference",
       authors: [
         { name: "Minhazul Islam", me: true },
@@ -1493,8 +1487,11 @@ def recommend_candidates(req):
     {
       id: "C.2",
       title: "Enhancing Biofeedback Interventions for Depression and Anxiety Through Entertainment Computing: A Systematic Review",
+      short: "Biofeedback interventions for depression & anxiety via entertainment computing: a systematic review",
+      badge: "ICEC 2025",
+      authorsShort: "T. Afra, M. Xue, M. Islam",
       venue: "Entertainment Computing – ICEC 2025 IFIP TC 14 Workshops: Tokyo, Japan, August 27–30, 2025, Proceedings",
-      venueShort: "ICEC 2025 · Tokyo, Japan · Aug 2025",
+      venueShort: "Springer LNCS · ICEC 2025 · Tokyo, Japan",
       type: "conference",
       authors: [
         { name: "Tasnim Afra", me: false },
@@ -1510,8 +1507,11 @@ def recommend_candidates(req):
     {
       id: "PCC.1",
       title: "BepsBot: A Dual-Mode Writing Assistant for Peer Support in Bipolar Disorder Communities",
+      short: "BEPSBot: draft-grounded writing assistant for bipolar peer support (N=24, SUS 86.98)",
+      badge: "HHME 2026",
+      authorsShort: "M. Islam, M. Xue, T. Afra",
       venue: "HHME 2026 — PCC Paper Presentation · Zhejiang University",
-      venueShort: "HHME 2026 · Zhejiang University",
+      venueShort: "HHME 2026 · Oral Presentation · Zhejiang University",
       type: "pcc",
       authors: [
         { name: "Minhazul Islam", me: true },
@@ -1529,8 +1529,11 @@ def recommend_candidates(req):
     {
       id: "PCC.2",
       title: "How Should Voice Agents Respond to Anger and Sadness? A Comparison of Empathic Response, Affect-Neutral Acknowledgment, and Cognitive Reappraisal",
+      short: "How should voice agents respond to anger and sadness? Empathic vs. neutral vs. reappraisal",
+      badge: "HHME 2026",
+      authorsShort: "T. Afra, M. Xue, M. Islam",
       venue: "HHME 2026 — PCC Paper Presentation · Zhejiang University",
-      venueShort: "HHME 2026 · Zhejiang University",
+      venueShort: "HHME 2026 · Oral Presentation · Zhejiang University",
       type: "pcc",
       authors: [
         { name: "Tasnim Afra", me: false },
@@ -1592,6 +1595,8 @@ def recommend_candidates(req):
       url: null,
     },
   ],
+
+  certsLine: "IBM × 3 · DeepLearning.AI × 1 (2025) — LLM lifecycle, PEFT/LoRA & RLHF, transformer fine-tuning, containerized GenAI applications",
 
   achievements: [
     {

@@ -77,20 +77,17 @@
 
   /* ---------- section renderers (language-aware) ---------- */
 
-  function renderPillars() {
+  function renderHero() {
     const D = window.I18N.getData();
-    const pillarsList = $("#pillars-list");
-    if (pillarsList && D.profile.pillars) {
-      pillarsList.innerHTML = D.profile.pillars
-        .map(
-          (p) => `
-          <div class="pillar-item">
-            <h4>${esc(p.title)}</h4>
-            <p>${esc(p.desc)}</p>
-          </div>`
-        )
-        .join("");
-    }
+    if (!D || !D.profile) return;
+    const p = D.profile;
+    const set = (id, val) => {
+      const el = document.getElementById(id);
+      if (el && val) el.textContent = val;
+    };
+    set("hero-availability", p.availability);
+    set("hero-workauth", p.workAuth);
+    set("hero-languages", p.languages);
   }
 
   function renderSkills() {
@@ -134,13 +131,66 @@
     return groups;
   }
 
+  // A point starting with "Tech:" is a compact tech list — split it on "·"
+  // and render as chips instead of a bullet.
+  const techChips = (tp) =>
+    `<div class="chips tl-tech">` +
+    tp
+      .slice(5)
+      .split("·")
+      .map((s) => s.trim())
+      .filter(Boolean)
+      .map((t) => `<span class="chip">${esc(t)}</span>`)
+      .join("") +
+    `</div>`;
+
+  const splitTech = (points) => ({
+    tech: points.filter((p) => typeof p === "string" && p.startsWith("Tech:")),
+    other: points.filter((p) => !(typeof p === "string" && p.startsWith("Tech:"))),
+  });
+
+  const bulletList = (pts) =>
+    `<ul>${pts.map((b) => `<li>${esc(b)}</li>`).join("")}</ul>`;
+
   function renderExperience() {
     const D = window.I18N.getData();
     const expList = $("#experience-list");
-    if (expList && D.experience) {
-      expList.innerHTML = D.experience
-        .map(
-          (e) => `
+    if (!expList || !D.experience) return;
+
+    expList.innerHTML = D.experience
+      .map((e) => {
+        let body;
+        if (e.projects) {
+          body = e.projects
+            .map((pr) => {
+              const { tech, other } = splitTech(pr.points);
+              const inner = groupPoints(other)
+                .map((g) =>
+                  g.headline
+                    ? `<h5 class="tl-headline">${esc(g.headline)}</h5>${bulletList(g.bullets)}`
+                    : bulletList(g.bullets)
+                )
+                .join("");
+              return `
+              <details class="exp-project"${pr.collapsed ? "" : " open"}>
+                <summary>
+                  <span class="tl-project-name">${esc(pr.name)}</span>
+                  ${pr.meta ? `<span class="tl-project-meta">${esc(pr.meta)}</span>` : ""}
+                  <span class="exp-toggle">${esc(t("exp.toggle"))}</span>
+                </summary>
+                <div class="exp-project-body">
+                  ${inner}
+                  ${tech.map(techChips).join("")}
+                </div>
+              </details>`;
+            })
+            .join("");
+        } else {
+          const { tech, other } = splitTech(e.points);
+          body = bulletList(other) + tech.map(techChips).join("");
+        }
+
+        return `
           <div class="timeline-item reveal">
             <div class="tl-head">
               <div>
@@ -150,82 +200,19 @@
               <span class="tl-period">${esc(e.period)}</span>
             </div>
             <p class="tl-location">${esc(e.location)}</p>
-            ${e.projects
-              ? e.projects
-                  .map(
-                    (pr) => {
-                      // A point starting with "Tech:" is a compact tech list —
-                      // split it on "·" and render as chips instead of a bullet.
-                      const techPoints = pr.points.filter((p) =>
-                        typeof p === "string" && p.startsWith("Tech:")
-                      );
-                      const otherPoints = pr.points.filter(
-                        (p) => !(typeof p === "string" && p.startsWith("Tech:"))
-                      );
-                      const techHTML = techPoints
-                        .map(
-                          (tp) =>
-                            `<div class="chips tl-tech">` +
-                            tp
-                              .slice(5)
-                              .split("·")
-                              .map((s) => s.trim())
-                              .filter(Boolean)
-                              .map((t) => `<span class="chip">${esc(t)}</span>`)
-                              .join("") +
-                            `</div>`
-                        )
-                        .join("");
-                      return `
-              <h4 class="tl-project-name">${esc(pr.name)}</h4>
-              ${groupPoints(otherPoints).map((g) => g.headline
-                ? `<h5 class="tl-headline">${esc(g.headline)}</h5><ul>${g.bullets.map((b) => `<li>${esc(b)}</li>`).join("")}</ul>`
-                : `<ul>${g.bullets.map((b) => `<li>${esc(b)}</li>`).join("")}</ul>`
-              ).join("")}
-              ${techHTML}`;
-                    }
-                  )
-                  .join("")
-              : (() => {
-                  const techPoints = e.points.filter(
-                    (p) => typeof p === "string" && p.startsWith("Tech:")
-                  );
-                  const otherPoints = e.points.filter(
-                    (p) => !(typeof p === "string" && p.startsWith("Tech:"))
-                  );
-                  const techHTML = techPoints
-                    .map(
-                      (tp) =>
-                        `<div class="chips tl-tech">` +
-                        tp
-                          .slice(5)
-                          .split("·")
-                          .map((s) => s.trim())
-                          .filter(Boolean)
-                          .map((t) => `<span class="chip">${esc(t)}</span>`)
-                          .join("") +
-                        `</div>`
-                    )
-                    .join("");
-                  return `<ul>${otherPoints
-                    .map((p) =>
-                      p.startsWith("H::")
-                        ? `<li class="tl-headline">${esc(p.slice(3))}</li>`
-                        : `<li>${esc(p)}</li>`
-                    )
-                    .join("")}</ul>${techHTML}`;
-                })()}
+            ${e.summary ? `<p class="tl-summary">${esc(e.summary)}</p>` : ""}
+            ${body}
             ${e.tech && e.tech.length ? `<div class="chips tl-tech">${e.tech.map((tch) => `<span class="chip">${esc(tch)}</span>`).join("")}</div>` : ""}
-          </div>`
-        )
-        .join("");
-    }
+          </div>`;
+      })
+      .join("");
   }
 
   /* ---------- projects (home, filterable) ---------- */
 
   const filterBar = $("#filter-bar");
-  const projectsGrid = $("#projects-grid");
+  const researchGrid = $("#research-projects-grid");
+  const systemsGrid = $("#systems-projects-grid");
   const earlierProjectsGrid = $("#earlier-projects-grid");
   let activeFilter = null;
 
@@ -282,14 +269,19 @@
 
   function renderProjects() {
     const D = window.I18N.getData();
-    if (!projectsGrid || !D.projects) return;
+    if (!D.projects) return;
     // The first filter option is the "show all" choice (e.g. "All" / "全部") —
     // normalize it to null so every card matches instead of requiring p.category === "All".
     const allLabel = D.projectFilters ? D.projectFilters[0] : null;
     const filter = activeFilter === allLabel ? null : activeFilter;
-    // Featured Work section only shows featured projects (Zhanlu, EDIA, BepsBot).
+    // Featured Work section only shows featured projects, split into
+    // human-subjects research projects and research engineering systems.
+    const researchIds = ["bepsbot"];
     const featured = (D.projects || []).filter((p) => p.featured);
-    projectsGrid.innerHTML = featured.map((p) => projectCard(p, filter)).join("");
+    const research = featured.filter((p) => researchIds.includes(p.id));
+    const systems = featured.filter((p) => !researchIds.includes(p.id));
+    if (researchGrid) researchGrid.innerHTML = research.map((p) => projectCard(p, filter)).join("");
+    if (systemsGrid) systemsGrid.innerHTML = systems.map((p) => projectCard(p, filter)).join("");
     revealOnScroll();
   }
 
@@ -314,62 +306,39 @@
 
   /* ---------- publications ---------- */
 
-  function renderRsToolkit() {
-    const D = window.I18N.getData();
-    const tbl = $("#rs-toolkit-table");
-    if (tbl && D.profile.rsToolkit) {
-      tbl.innerHTML =
-        `<thead><tr><th>Domain</th><th>Core Frameworks & Methodologies</th></tr></thead>` +
-        `<tbody>${D.profile.rsToolkit
-          .map((r) => `<tr><td><strong>${esc(r.domain)}</strong></td><td>${esc(r.tools)}</td></tr>`)
-          .join("")}</tbody>`;
-    }
-  }
-
   function renderPublications() {
     const D = window.I18N.getData();
     const pubsList = $("#publications-list");
-    if (pubsList && D.publications) {
-      pubsList.innerHTML = D.publications
-        .map(
-          (p) => {
-            const type = p.type || (p.id && p.id.startsWith("PCC") ? "pcc" : "conf");
-            const typeLabel = type === "pcc" ? "PCC Oral" : "Conference Paper";
-            return `
-          <article class="paper paper-${type} reveal">
-            <div class="paper-head">
-              <span class="paper-id">${esc(p.id)}</span>
-              <span class="paper-type">${esc(typeLabel)}</span>
-              <span class="paper-year">${esc(p.year || "")}</span>
-            </div>
-            <h3 class="paper-title">${esc(p.title)}</h3>
-            <p class="paper-authors">${p.authors.map((a) =>
-              a.me ? `<strong>${esc(a.name)}</strong>` : `<span>${esc(a.name)}</span>`
-            ).join(", ")}</p>
-            ${p.impact ? `<p class="paper-impact">${esc(p.impact)}</p>` : ""}
-            <p class="paper-venue">${esc(p.venueShort || p.venue)}</p>
-            <div class="paper-detail">
-              ${p.pages ? `<span>${esc(t("pub.pages"))} ${esc(p.pages)}</span>` : ""}
-              ${p.published ? `<span>· ${esc(p.doi ? t("pub.published") : t("pub.presented"))} ${esc(p.published)}</span>` : ""}
-            </div>
-            <div class="paper-cta">
-              ${p.doi
-                ? `<a class="paper-btn" href="https://doi.org/${esc(p.doi)}" target="_blank" rel="noopener">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
-                    doi.org/${esc(p.doi)}
-                  </a>`
-                : p.conferenceUrl
-                ? `<a class="paper-btn" href="${esc(p.conferenceUrl)}" target="_blank" rel="noopener">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
-                    ${esc(t("pub.conferencePage"))}
-                  </a>`
-                : ""}
-            </div>
-          </article>`;
-          }
-        )
-        .join("");
-    }
+    if (!pubsList || !D.publications) return;
+
+    // Compact one-line rows: recruiters scan titles + venues, not abstracts.
+    // DOIs stay in the data (and are linked) but page numbers and abstracts
+    // are deliberately not rendered on the home page.
+    const pubRow = (p) => {
+      const href = p.doi
+        ? `https://doi.org/${esc(p.doi)}`
+        : p.conferenceUrl || null;
+      const inner = `
+        <span class="pub-badge">${esc(p.badge || p.id)}</span>
+        <span class="pub-main">
+          <span class="pub-title">${esc(p.short || p.title)}</span>
+          <span class="pub-meta">${esc(p.authorsShort || "")}${p.authorsShort && p.venueShort ? " · " : ""}${esc(p.venueShort || p.venue || "")}</span>
+        </span>`;
+      return href
+        ? `<a class="pub-row reveal" href="${href}" target="_blank" rel="noopener">${inner}</a>`
+        : `<div class="pub-row reveal">${inner}</div>`;
+    };
+
+    // Split exactly like the CV: peer-reviewed (has DOI/proceedings) vs
+    // presentations / non-archival work (PCC orals).
+    const reviewed = D.publications.filter((p) => p.type !== "pcc");
+    const presented = D.publications.filter((p) => p.type === "pcc");
+    pubsList.innerHTML = `
+        <h3 class="grid-subhead">${esc(t("pub.reviewedTitle"))}</h3>
+        ${reviewed.map(pubRow).join("")}
+        <h3 class="grid-subhead">${esc(t("pub.presentedTitle"))}</h3>
+        ${presented.map(pubRow).join("")}`;
+    revealOnScroll();
   }
 
   /* ---------- education ---------- */
@@ -378,16 +347,19 @@
     const D = window.I18N.getData();
     const eduList = $("#edu-list");
     if (eduList && D.education) {
+      // Two lines per degree, no descriptions — degree + school, then dates.
       eduList.innerHTML = D.education
         .map(
           (e) => `
-          <div class="edu-card reveal">
-            <div class="edu-head">
-              <h3>${esc(e.school)}</h3>
-              <span class="edu-period">${esc(e.period)}</span>
+          <div class="edu-row reveal">
+            <div class="edu-main">
+              <h3>${esc(e.degree)}</h3>
+              <span class="edu-school">${esc(e.school)}</span>
             </div>
-            <p class="edu-degree">${esc(e.degree)}</p>
-            <p class="edu-school">${esc(e.location)}</p>
+            <div class="edu-meta">
+              <span>${esc(e.period)}</span>
+              <span>${esc(e.location)}</span>
+            </div>
           </div>`
         )
         .join("");
@@ -400,7 +372,12 @@
     const D = window.I18N.getData();
     const certList = $("#cert-list");
     if (certList && D.certifications) {
-      certList.innerHTML = D.certifications
+      // Collapsed to a single summary line; the individual certificates stay
+      // available inside the existing <details> disclosure.
+      const summary = D.certsLine
+        ? `<p class="certs-line">${esc(D.certsLine)}</p>`
+        : "";
+      const detail = D.certifications
         .map(
           (c) => `
           <div class="cert-item reveal">
@@ -414,6 +391,7 @@
           </div>`
         )
         .join("");
+      certList.innerHTML = `${summary}<div class="cert-detail-grid">${detail}</div>`;
     }
   }
 
@@ -444,13 +422,12 @@
   /* ---------- render all (runs on load + language change) ---------- */
 
   function renderAll() {
+    renderHero();
     renderFilters();
-    renderPillars();
     renderSkills();
     renderExperience();
     renderProjects();
     renderEarlierProjects();
-    renderRsToolkit();
     renderPublications();
     renderEducation();
     renderCerts();
@@ -498,7 +475,7 @@
   /* ---------- active nav highlight ---------- */
 
   const navLinks = $$("#nav-links a");
-  const sections = ["about", "research-st", "publications", "projects", "experience", "skills", "education", "earlier-projects", "contact"]
+  const sections = ["about", "experience", "projects", "skills", "publications", "education", "contact"]
     .map((id) => document.getElementById(id))
     .filter(Boolean);
 

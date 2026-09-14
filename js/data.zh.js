@@ -9,139 +9,128 @@ window.PORTFOLIO_ZH = {
   profile: {
     name: "Minhazul Islam",
     monogram: "MI",
-    title: "AI 系统研究者",
-    roleLine: "可信智能体 AI · 人机交互 · 可验证 AI 系统",
+    title: "AI 工程师",
+    roleLine: "智能体 AI · 大模型系统 · 应用机器学习",
+    headline: "AI 工程师 — 智能体 AI、大模型系统与应用机器学习",
+    kicker: "浙江大学硕士在读 · 云南大学计算机学士",
+    availability: "开放全职 AI/ML 工程岗位 · 上海或远程 · 2026–2027",
+    workAuth: "目前持学生签证 · 毕业后可转为工作许可（2026 年 12 月）",
+    languages: "英语（流利）· 中文（工作交流）· 孟加拉语（母语）",
     location: "中国浙江宁波",
     email: "minhaz1396@zju.edu.cn",
     phone: "+86 15990259205",
     github: "https://github.com/Minhaz2858",
     linkedin: "https://www.linkedin.com/in/minhazul-islam-43b3a4221/",
-    cv: "assets/Islam_Minhazul_CV.pdf",
+    scholar: "https://scholar.google.com/citations?hl=en&view_op=search_authors&mauthors=Minhazul+Islam",
+    cv: "assets/Minhazul_Islam_Resume.pdf",
     photo: "assets/profile.jpg",
     summary:
-      "AI 系统研究者（浙江大学硕士在读），专注于可信智能体 AI、落地式决策智能与人机交互的交叉领域。我构建并研究通过结构化规划、工具使用落地、验证与人机监督来处理复杂决策的智能体系统——覆盖企业决策智能与 AI 介导的心理健康沟通。",
+      "我端到端交付生产级 AI 系统——从多智能体 LLM 架构、RAG 基础设施，到 Docker 化部署与流式 API。在 Synexia AI，我交付了 EDIA（17 节点 LangGraph 决策智能平台，覆盖 19 个石化产品）与 Zhanlu（受治理的多智能体运行时，144 个注册工具、沙箱化执行）。我的硕士论文 BEPSBot 把同样的系统思维应用到敏感领域：面向心理健康同伴支持的草稿锚定写作助手，并通过 24 人用户研究验证。",
+    howIWork:
+      "我坚信 LLM 只应叙述、绝不应计算——因此在每个系统中我都构建确定性护栏、可验证的工具流水线与人工监督机制，无论是企业预测还是心理健康沟通。",
     bio: [
-      "我将算法能力、工程严谨性与对用户的理解相结合，推动 AI 产品走完完整生命周期——从模型研究到系统部署。",
-      "我的工作涵盖：面向生产级决策智能平台的多智能体 LLM 编排、面向心理健康支持的检索增强生成系统、面向领域打分的 Transformer 微调，以及面向无障碍场景的嵌入式 AI 原型。",
-      "我乐于解决那些既需要深厚技术、又需要清晰用户视角的问题：让 LLM 扎根于证据、让 AI 输出可验证，并交付在真实负载下稳定运行的系统。",
-    ],
-    pillars: [
-      { title: "人机协同决策与 HCI", desc: "面向同伴支持写作辅助（心理健康社区）、生物反馈干预与情感计算的实证研究——发表于 ICEC 2025 与 HHME 2026 PCC。" },
-      { title: "多智能体编排与 Harness 运行时", desc: "状态机执行（17 节点 LangGraph FSM）、规划优先回合规划、子智能体委派，以及带 Model Context Protocol (MCP) 桥接的自研 Harness Agent 运行时。" },
-      { title: "上下文工程与落地式 RAG", desc: "混合检索（ChromaDB 向量搜索 + 结构化 SQL 数据落地）、上下文预算管理与负载溢出、长期语义记忆。" },
-      { title: "治理优先的系统安全", desc: "确定性 Python 校验层——在 LLM 叙述前预计算并锁定业务关键数据；通过预渲染指标消除一类数值幻觉。" },
-      { title: "沙箱执行与 LLMOps", desc: "Docker 隔离的技能执行（sandbox-python、sandbox-pptx）、LLM-as-judge 阻断式质量门禁、多供应商模型路由，以及 SSE 流式 API。" },
-    ],
-    rsToolkit: [
-      { domain: "编排与运行时", tools: "LangGraph、自研 Synexia FSM、Harness Agent 运行时、Model Context Protocol (MCP)、ReAct / CoT 规划" },
-      { domain: "上下文与检索基础设施", tools: "混合向量 + SQL RAG、ChromaDB、BAAI/bge-m3、上下文预算管理、上下文压缩" },
-      { domain: "校验与评估", tools: "确定性 Python 护栏、预渲染、LLM-as-Judge 审计门禁、前推 MAPE 回测" },
-      { domain: "生产 LLMOps 与基础设施", tools: "Docker 微服务（14 服务栈）、FastAPI、Redis、MinIO、SSE 流式、Prometheus/Grafana" },
-      { domain: "机器学习与 NLP", tools: "PyTorch、Hugging Face Transformers、PEFT/LoRA、STL + 时间序列集成、RoBERTa / BERT 微调" },
-      { domain: "边缘 AI 与嵌入式 HCI", tools: "Arduino、C/C++、ESP32-CAM、传感器融合、边缘 AI 原型" },
+      "我是浙江大学工业设计工程硕士在读，本科毕业于云南大学计算机科学与技术专业。过去两年我在 Synexia AI 担任 AI 基础设施与系统工程师，从零构建了两个生产级平台。",
+      "EDIA 在任何 LLM 叙述之前用确定性 Python 预先计算所有业务关键指标，把决策流程延迟从最高 478 秒缩短至 30–45 秒。Zhanlu 是面向受治理、使用工具的 AI 智能体的多租户平台，具备权限过滤的工具分发、Docker 沙箱执行、MCP 集成与完整审计追踪。",
+      "除工程之外，我也从事以人为本的 AI 研究。我的论文 BEPSBot（HHME 2026 PCC）表明草稿锚定生成让建议采纳率提升一倍以上（33.3% → 75.6%），同时保持可用性（SUS 86.98），并与两篇 ICEC 2025 论文（双相障碍生物标志物、生物反馈干预）一同发表。",
+      "我正在寻找能够从架构到部署全程负责大模型与智能体系统的工程岗位，尤其是在正确性与可信度至关重要的领域。",
     ],
     stats: [
       { num: "0", label: "条 LLM 计算的数字触达用户（EDIA——LLM 只叙述、绝不计算）" },
       { num: "17", label: "节点 LangGraph FSM 编排器（EDIA）" },
       { num: "5m→30s", label: "端到端决策延迟——90–478s → 30–45s（EDIA）" },
-      { num: "2+2", label: "篇同行评审论文 + 会议报告（ICEC 2025, HHME 2026 PCC）" },
+      { num: "2+2", label: "篇同行评审论文（ICEC 2025）+ 会议报告（HHME 2026 PCC）" },
     ],
   },
 
   skills: [
     {
-      category: "多智能体系统与智能体运行时",
+      category: "大模型与智能体系统",
       items: [
-        "LangGraph（17 节点 FSM）", "Agent Harness", "Model Context Protocol (MCP)",
-        "规划优先回合规划", "子智能体工作流", "目标契约与自纠错",
-        "控制与可观测性层", "LLM-as-Judge 评估", "Tool/Skill/MCP 网关",
+        "LangGraph（17 节点 FSM）", "多智能体编排", "Model Context Protocol (MCP)",
+        "规划优先回合规划", "子智能体委派", "工具 / 技能注册表设计",
+        "LLM-as-a-Judge 评估", "提示与上下文工程",
       ],
     },
     {
-      category: "上下文工程与检索基础设施",
+      category: "RAG 与数据依据",
       items: [
-        "上下文预算与溢出管理", "混合向量 + SQL RAG", "ChromaDB / BAAI/bge-m3 嵌入",
-        "确定性护栏", "输出校验", "上下文裁剪与隔离",
+        "混合向量 + SQL 检索", "ChromaDB", "BAAI/bge-m3 嵌入",
+        "上下文预算与溢出管理", "语义记忆", "NL2SQL 流水线",
+        "输出校验与护栏",
       ],
     },
     {
-      category: "AI 基础设施与 LLMOps",
+      category: "后端与基础设施",
       items: [
-        "Docker 技术栈（14 服务）", "FastAPI / SSE 流式", "本地 vLLM (Qwen3-27B) / Ollama",
-        "Redis 队列/锁/SSE", "PostgreSQL / MinIO 存储", "Prometheus & Grafana 可观测性",
-        "多供应商路由", "双 LLM 安全门禁", "Systemd / Nginx / 自动恢复",
+        "FastAPI", "SSE 流式", "PostgreSQL", "Redis（队列 / 锁）",
+        "MySQL", "MinIO", "Docker（14 服务栈）", "Nginx", "Systemd",
+        "JWT 鉴权", "Prometheus / Grafana", "GitHub Actions CI/CD",
       ],
     },
     {
-      category: "语言与 AI 开发工具",
+      category: "机器学习与预测",
       items: [
-        "Python (Asyncio)", "C / C++", "SQL / JavaScript",
-        "PyTorch / Transformers", "Git / GitHub Actions CI/CD",
+        "PyTorch", "Transformers", "XGBoost", "ARIMA / LSTM / STL 集成",
+        "滚动回测（MAPE）", "本地推理（vLLM、Ollama、Qwen）",
+        "多供应商模型路由",
+      ],
+    },
+    {
+      category: "语言与工具",
+      items: [
+        "Python (Asyncio)", "C / C++", "SQL", "JavaScript", "React", "Git",
+        "Autodesk Inventor / Fusion 360 API",
+      ],
+    },
+    {
+      category: "研究方法",
+      items: [
+        "用户研究（N=24 被试内设计）", "可用性评估（SUS）",
+        "质性访谈研究", "系统性综述",
       ],
     },
   ],
 
   experience: [
     {
-      role: "AI 基础设施与系统工程师（实习）",
+      role: "AI 基础设施工程师（实习）",
       company: "Synexia AI",
       period: "2025 – 2026",
       location: "中国浙江",
+      summary: "独立构建两个生产级 AI 平台 —— EDIA（企业决策智能）与 Zhanlu（受治理的多智能体运行时）。",
       projects: [
         {
-          name: "项目 1：EDIA — 企业决策智能平台",
+          name: "EDIA — 企业决策智能 Agent",
+          meta: "17 节点 LangGraph FSM · 15 个智能体 · 57 项技能 · 19 个产品已上线预测",
+          collapsed: false,
           points: [
-            "多智能体编排：架构了 17 节点 LangGraph 状态机，在 5 个执行层级中协调 15 个专业智能体和 57 项原子技能，支持并行分支、顺序质量门禁和多轮会话状态。",
-            "确定性护栏流水线：设计了预渲染流水线，在 LLM 叙述前锁定所有业务关键数值预测，配合 Python 校验引擎强制执行精确值合规、语言一致性和严格来源归属。",
-            "混合检索架构：将 ChromaDB 向量搜索与结构化 SQL 视图集成，融合非结构化市场情报与 ERP 历史数据，端到端决策延迟由 90–478 秒缩短至 30–45 秒区间。",
-            "生产运维：部署了高并发 SSE 流式端点（FastAPI、Nginx、systemd）及多时间尺度时间序列预测模型（集成 + STL），配合自动化 MAPE 回测。",
+            "架构了 17 节点 LangGraph 状态机，在 5 个执行层级中编排 15 个专业智能体与 57 项原子技能 —— 条件路由、并行分支、顺序质量门禁与多轮会话状态持久化。",
+            "从架构层面消除数值幻觉：确定性预渲染流水线在任何 LLM 叙述之前用 Python 计算并冻结所有业务关键指标，配合校验引擎强制精确值合规与严格来源归属。",
+            "将端到端决策延迟从 90–478 秒降至 30–45 秒：将 ChromaDB 向量检索与映射到 19 个产品的 38 个 SQL 视图融合，SQL 往返从 77 次降到 2–5 次，取回行数从 18 万降到约 200 行。每次查询结果都是不可变、带校验和的快照并以 ID 引用，实时数据库凭证永不进入 LLM 上下文。",
+            "部署多时间尺度预测（ARIMA + XGBoost + LSTM + STL 集成），配合滚动 MAPE 回测与 Honesty Gate —— 当模型不确定性超过阈值时自动降级为保守预测。最佳 MAPE 1.4%。",
+            "在生产环境运行：FastAPI + Nginx + systemd，SSE 流式与 JWT 鉴权，并采用双 LLM 安全架构 —— 由本地 Qwen 模型先净化 ERP 数据，再交给外部供应商。",
+            "Tech: LangGraph · FastAPI · ChromaDB · PyTorch · XGBoost · statsmodels · Docker · nginx · SSE · MySQL · Redis",
           ],
         },
         {
-          name: "项目 2：Zhanlu — 企业 AI 智能体基础设施",
+          name: "Zhanlu — 企业 AI 智能体基础设施",
+          meta: "受治理智能体运行时 · 144 个工具定义 · MCP 客户端/服务端 · Docker 沙箱",
+          collapsed: true,
           points: [
-            "面向构建与运行受治理、使用工具的 AI 智能体的多租户平台。",
-            "作为 Synexia AI 实习期间的独立 AI 平台工程项目完成。",
-            "H::Agent Harness 与运行时",
-            "构建自定义 Synexia FSM，涵盖结构化的计划、行动、观察与验证阶段，带迭代预算、目标契约、工具循环检测、持久化执行状态与确定性置信度评分。",
-            "实现调用前上下文预算控制：估算 token 用量、压缩会话历史、将超大工具结果外部化，以降低跨模型上限的上下文溢出失败。",
-            "设计持久化的 Plan DAG 表示，覆盖类型化的工具、技能、NL2SQL 与沙箱节点。已批准的节点目前串行执行；通用并行 DAG 执行仍是后续工作。",
-            "为程序化与委托的智能体运行实现基于检查点的恢复。主会话路径目前使用独立的运行时循环。",
-            "H::动态数据智能",
-            "设计基于能力的架构：Harness 暴露授权的 SourceDescriptor，由活跃智能体判断哪些数据源和工具与请求相关。",
-            "消除了隐式默认数据库选择、首选数据源兜底、关键词到数据源路由、按数据源的业务规则与自动查询全部数据源的行为。",
-            "构建结构化执行路径：",
-            "意图 → 数据源发现 → 候选表 → GroundedPlan → SQL 编译与校验 → 数据库执行 → CanonicalResultSet",
-            "添加确定性时间解释、指标契约、单位校验、结果粒度控制与数据源来源，支撑有依据的业务数据回答。",
-            "围绕跨智能体一致性不变量进行设计：相同的语义请求、授权数据源范围与时间上下文，应产出相同的 GroundedPlan 与规范化结果。",
-            "H::工具注册与 MCP 集成",
-            "构建基于装饰器的工具注册表，带函数模式规范化与按角色的工具过滤。在特定已验证版本中，注册表包含 144 个工具定义。",
-            "实现 MCP 客户端与服务端集成，带受控的外部工具访问与 OAuth 支持。",
-            "添加供应商健康追踪、熔断行为、回退路由与加密的供应商密钥存储。",
+            "构建面向受治理、使用工具的 AI 智能体的多租户运行时：基于 144 个工具注册表的权限过滤分发、带 OAuth 的 MCP 客户端/服务端集成、供应商健康追踪与熔断、回退路由与加密密钥存储。",
+            "交付 Docker 沙箱执行，覆盖 Python、PPTX、Web 应用与办公文档工作负载 —— 按任务构建镜像并强制内存、CPU、进程、输出与执行时长限制，通过 Redis 队列与事件流提交，沙箱产物不接触原始数据源凭证。",
+            "设计基于能力的数据智能链路（意图 → 数据源发现 → GroundedPlan → SQL 编译 → CanonicalResultSet），消除隐式默认库选择与关键词到数据源的路由，并配套确定性时间解释、指标契约、单位校验与来源溯源。",
+            "实现调用前上下文预算控制 —— token 估算、分层历史压缩、语义去重与超大工具结果外置 —— 消除不同模型上下文上限下的溢出失败。",
+            "构建评估层：覆盖数据源选择、时间解释、SQL 语义、授权、工具循环上限与失败恢复的回归场景，配合确定性产物校验、LLM-as-judge 质量门禁与完整执行追踪（模型调用、工具、重试、延迟、token、策略决策）。",
             "开发 CAD 智能体，通过 MCP 兼容桥接控制 Autodesk Fusion 360，使用带类型的参数化建模操作与几何校验。",
-            "H::沙箱执行与安全",
-            "面向 Python、PPTX、Web 应用与办公文档工作负载构建任务专用 Docker 沙箱镜像，配置内存、CPU、进程、输出与执行时长限制。",
-            "通过 worker 与 Redis 队列及事件流隔离沙箱任务提交。",
-            "设计数据源中介执行，使沙箱产物工作流可在受控数据输入上运行，而不接触原始数据源凭证。",
-            "为结构化 Harness 执行实现工具允许/拒绝清单、策略决策、租户感知资源范围与只追加审计记录。",
-            "全栈仪表盘生成目前在后端服务内运行，仍是隔离例外。",
-            "H::评估与输出验证",
-            "为数据源选择、时间解释、SQL 语义、授权、工具循环限制、结果一致性与失败恢复构建回归场景。",
-            "使用确定性校验与 LLM 辅助的评分规则实现自动化产物质量检查。",
-            "未通过配置产物检查的输出可以被扣留或标记为失败；基于 LLM 的评估被视为质量信号，而非产物不含幻觉的证明。",
-            "添加覆盖模型调用、工具活动、重试、延迟、token 用量、策略决策与运行状态的执行追踪。",
-            "验证目前记录质量与置信度信号；完整的自动反思与重规划循环仍是后续工作。",
-            "H::上下文工程与记忆",
-            "实现分层历史压缩与语义去重，以控制重复或低价值上下文。",
-            "构建分层工具结果处理：单结果上限、超大载荷外部存储，以及模型上下文内的指针替换。",
-            "添加项目级记忆、语义检索与基于向量的知识访问。",
-            "使用渐进式能力披露，使智能体获得相关的工具与技能摘要，而不必将完整目录加载进每个提示。",
+            "通过工具允许/拒绝清单、策略决策、租户感知资源范围与只追加审计记录加固平台。",
+            "Tech: LangGraph · FastAPI · React · PostgreSQL · Redis · MinIO · Docker · MCP · OpenTelemetry · pytest · GitHub Actions",
           ],
         },
       ],
       tech: [
-        "LangGraph", "Agent Harness", "ChromaDB", "FastAPI", "SSE Streaming",
-        "LLM 护栏", "MCP 网关", "模型路由", "Docker",
+        "FastAPI", "PostgreSQL", "Redis", "MinIO", "Docker",
+        "LangGraph", "ChromaDB", "OpenTelemetry", "pytest", "GitHub Actions",
       ],
     },
     {
@@ -162,6 +151,7 @@ window.PORTFOLIO_ZH = {
   projects: [
     {
       id: "edia",
+      featured: true,
       title: "EDIA — 企业决策智能平台",
       short: "面向石化预测、决策与智能告警的多智能体 LLM 平台。",
       category: "AI 基础设施",
@@ -250,6 +240,7 @@ window.PORTFOLIO_ZH = {
     },
     {
       id: "zhanlu",
+      featured: true,
       title: "Zhanlu（湛卢）：企业 AI 智能体平台",
       short: "Agent Harness · RAG · Skills 与 MCP · 自动化 · LLMOps——用户创建和配置 Agent，接入授权数据库与上传文档，通过对话开展数据分析、生成业务看板和办公文档，并设置定时任务。",
       category: "AI 基础设施",
@@ -488,6 +479,7 @@ window.PORTFOLIO_ZH = {
     },
     {
       id: "bepsbot",
+      featured: true,
       title: "BepsBot — AI 驱动的心理健康同伴支持平台",
       short: "浙江大学硕士论文研究——面向双相障碍同伴支持社区的草稿锚定 AI 写作助手。口头报告于 HHME 2026 PCC，浙江大学（2026）。",
       category: "生成式 AI",
@@ -693,6 +685,20 @@ def recommend_candidates(req):
             <p class="pd-lead">研究揭示了一个反直觉的发现：评估性反馈主要起到<em>确认机制</em>，而非修改触发器。多数被试（66.7%）在使用 AS 作为校验节点后，原样提交了 AI 介入前的草稿。5 名被试以身份认同为由主动拒绝 RE 模式，认为建议「过于机械」或威胁到自身经验权威。这并非系统失败，而是一种合理的用户立场：<em>声音保留</em>。</p>
             <div class="pd-callout"><b>设计启示：</b>面向心理健康社区的 AI 写作支持，应从自动化走向增强反思与表达。未来的系统应强调评估透明、情境敏感与对用户作者性的尊重。12.8% 的完全替换模式表明，基于检索的、非情境化的样例偶而被视为语境不足——这驱动我们下一步研究自适应的、情境感知的生成机制。</div>
             <p class="pd-lead">开放性局限：24 名被试限制了结论的可推广性；3 次会话仅捕捉到早期适应；RE 模式依赖基于检索的样例（而非生成式）。未来工作还应考察支持<em>接收方</em>如何看待 AI 协助的同伴回复——真实性、信任感与情感影响。</p>
+          `,
+        },
+        {
+          title: "局限与下一步研究问题",
+          body: `
+            <p class="pd-lead">直白地说：一个成功的原型，不等于一个经过验证的科学结论。</p>
+            <h3 class="pd-subh">局限</h3>
+            <p>本研究在受控环境中评估了提供者侧的采纳与可用性；它并未确立对接收方的下游收益、长期安全性，或语义保真是否得到一致保持。样本（N=24，被试内设计，3 次写作任务）捕捉的是早期适应而非持续使用，评估指标是采纳率与可用性——而非接收方结果。</p>
+            <h3 class="pd-subh">下一步研究问题</h3>
+            <ul>
+              <li><b>测量：</b>当 AI 改写一个人的草稿时，语义保留应如何测量与验证？</li>
+              <li><b>真实性：</b>AI 润色何时会降低感知真实性？接收方（而非作者）如何察觉并评价它？</li>
+              <li><b>纵向评估：</b>在合适的伦理监督下，如何在真实的同伴支持社区中纵向评估接收方结果与安全性？</li>
+            </ul>
           `,
         },
       ],
@@ -1056,14 +1062,18 @@ def recommend_candidates(req):
     {
       id: "C.1",
       title: "Exploring Psychologist-Applied Biomarkers in Bipolar Disorder: A Systematic Framework",
+      short: "Psychologist-applied biomarkers in bipolar disorder: a systematic framework",
+      badge: "ICEC 2025",
+      authorsShort: "M. Islam, M. Xue, T. Afra",
       venue: "Entertainment Computing – ICEC 2025 IFIP TC 14 Workshops: Tokyo, Japan, August 27–30, 2025, Proceedings",
-      venueShort: "ICEC 2025 · Tokyo, Japan · Aug 2025",
+      venueShort: "Springer LNCS · ICEC 2025 · Tokyo, Japan",
       type: "conference",
       authors: [
         { name: "Minhazul Islam", me: true },
         { name: "Mengru Xue", me: false },
         { name: "Tasnim Afra", me: false },
       ],
+      impact: "对七位心理健康专业人员开展定性访谈，识别与双相障碍长期监测相关的生理、行为与社会心理信号，为以临床医生为中心的多模态 AI 框架提供依据。",
       doi: "10.1007/978-3-032-02534-0_8",
       pages: "61–75",
       published: "2025 年 8 月 27 日",
@@ -1072,14 +1082,18 @@ def recommend_candidates(req):
     {
       id: "C.2",
       title: "Enhancing Biofeedback Interventions for Depression and Anxiety Through Entertainment Computing: A Systematic Review",
+      short: "Biofeedback interventions for depression & anxiety via entertainment computing: a systematic review",
+      badge: "ICEC 2025",
+      authorsShort: "T. Afra, M. Xue, M. Islam",
       venue: "Entertainment Computing – ICEC 2025 IFIP TC 14 Workshops: Tokyo, Japan, August 27–30, 2025, Proceedings",
-      venueShort: "ICEC 2025 · Tokyo, Japan · Aug 2025",
+      venueShort: "Springer LNCS · ICEC 2025 · Tokyo, Japan",
       type: "conference",
       authors: [
         { name: "Tasnim Afra", me: false },
         { name: "Mengru Xue", me: false },
         { name: "Minhazul Islam", me: true },
       ],
+      impact: "系统综述娱乐计算场景下的生物反馈干预，归纳出可同时提升参与度与临床效果的设计模式。",
       doi: "10.1007/978-3-032-02534-0_6",
       pages: "37–51",
       published: "2025 年 8 月 27 日",
@@ -1088,14 +1102,18 @@ def recommend_candidates(req):
     {
       id: "PCC.1",
       title: "BepsBot: A Dual-Mode Writing Assistant for Peer Support in Bipolar Disorder Communities",
+      short: "BEPSBot: draft-grounded writing assistant for bipolar peer support (N=24, SUS 86.98)",
+      badge: "HHME 2026",
+      authorsShort: "M. Islam, M. Xue, T. Afra",
       venue: "HHME 2026 — PCC Paper Presentation · Zhejiang University",
-      venueShort: "HHME 2026 · Zhejiang University",
+      venueShort: "HHME 2026 · Oral Presentation · Zhejiang University",
       type: "pcc",
       authors: [
         { name: "Minhazul Islam", me: true },
         { name: "Mengru Xue", me: false },
         { name: "Tasnim Afra", me: false },
       ],
+      impact: "被试内研究（N=24）：基于草稿的生成使建议采纳率提升逾一倍（33.3% → 75.6%），同时保持可用性（SUS 86.98）。",
       status: "PCC 口头报告 · 2026 年 8 月 17 日",
       conferenceUrl: "https://hhme.ccf.org.cn/PCC_paper.html",
       doi: null,
@@ -1106,14 +1124,18 @@ def recommend_candidates(req):
     {
       id: "PCC.2",
       title: "How Should Voice Agents Respond to Anger and Sadness? A Comparison of Empathic Response, Affect-Neutral Acknowledgment, and Cognitive Reappraisal",
+      short: "How should voice agents respond to anger and sadness? Empathic vs. neutral vs. reappraisal",
+      badge: "HHME 2026",
+      authorsShort: "T. Afra, M. Xue, M. Islam",
       venue: "HHME 2026 — PCC Paper Presentation · Zhejiang University",
-      venueShort: "HHME 2026 · Zhejiang University",
+      venueShort: "HHME 2026 · Oral Presentation · Zhejiang University",
       type: "pcc",
       authors: [
         { name: "Tasnim Afra", me: false },
         { name: "Mengru Xue", me: false },
         { name: "Minhazul Islam", me: true },
       ],
+      impact: "对比三种回应策略，识别共情式回应相对情感中性确认与认知重评更能缓解用户负面情绪的条件。",
       status: "PCC 口头报告 · 2026 年 8 月 17 日",
       conferenceUrl: "https://hhme.ccf.org.cn/PCC_paper.html",
       doi: null,
@@ -1168,6 +1190,8 @@ def recommend_candidates(req):
       url: null,
     },
   ],
+
+  certsLine: "IBM × 3 · DeepLearning.AI × 1（2025）—— LLM 生命周期、PEFT/LoRA 与 RLHF、Transformer 微调、容器化生成式 AI 应用",
 
   achievements: [
     {
