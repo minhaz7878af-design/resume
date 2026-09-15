@@ -17,7 +17,7 @@
       meta: {
         title: "Minhazul Islam — AI Engineer | Agentic AI, LLM Systems & Full-Stack",
         description:
-          "AI Engineer with 2+ years building production agentic AI systems — LangGraph multi-agent platforms, RAG infrastructure, and LLMOps. Shipped a 17-node decision-intelligence platform covering 19 petrochemical products in live forecast use. Open to AI/ML engineering roles in Shanghai or remote.",
+          "AI Engineer with 2+ years building production agentic AI systems — LangGraph multi-agent platforms, RAG infrastructure, and LLMOps. Shipped a 17-node decision-intelligence platform covering 19 petrochemical products in live forecast use. Open to AI/ML engineering roles in Hangzhou or Shanghai, or remote.",
         libTitle: "Project Library — Minhazul Islam",
         libDescription:
           "Comprehensive details on all of Minhazul Islam's AI, ML, and embedded systems projects.",
@@ -61,7 +61,7 @@
 
       avail: {
         textStrong: "Open to full-time AI/ML engineering roles",
-        textRest: " — Shanghai or remote · 2026–2027",
+        textRest: " — Hangzhou / Shanghai / Remote · 2026–2027",
         seeProjects: "See Selected Work",
         downloadCv: "Download Résumé (PDF)",
         workAuthLabel: "Work authorization",
@@ -138,7 +138,7 @@
         eyebrow: "Contact",
         title: "Let's build something",
         getInTouch: "Get in touch",
-        text: "I'm currently open to full-time AI/ML engineering roles — Shanghai-based or remote — starting after my expected graduation in December 2026 (earlier for internships or part-time).",
+        text: "I'm currently open to full-time AI/ML engineering roles — based in Hangzhou, open to Shanghai or remote — starting after my expected graduation in December 2026 (earlier for internships or part-time).",
         nameLabel: "Name",
         namePh: "Your name",
         emailLabel: "Email",
@@ -189,7 +189,7 @@
       meta: {
         title: "Minhazul Islam — AI 工程师 | 智能体 AI、大模型系统与全栈",
         description:
-          "AI 工程师，2 年以上生产级智能体 AI 系统经验——LangGraph 多智能体平台、RAG 基础设施与 LLMOps。交付覆盖 19 个石化产品的 17 节点决策智能平台并投入实际预测使用。开放上海或远程 AI/ML 工程岗位。",
+          "AI 工程师，2 年以上生产级智能体 AI 系统经验——LangGraph 多智能体平台、RAG 基础设施与 LLMOps。交付覆盖 19 个石化产品的 17 节点决策智能平台并投入实际预测使用。开放杭州、上海或远程 AI/ML 工程岗位。",
         libTitle: "项目库 — Minhazul Islam",
         libDescription: "Minhazul Islam 所有 AI、机器学习与嵌入式系统项目的详细介绍。",
       },
@@ -232,7 +232,7 @@
 
       avail: {
         textStrong: "开放全职 AI/ML 工程岗位",
-        textRest: " —— 上海或远程 · 2026–2027",
+        textRest: " —— 杭州 / 上海 / 远程 · 2026–2027",
         seeProjects: "查看代表作品",
         downloadCv: "下载简历 (PDF)",
         workAuthLabel: "工作许可",
@@ -309,7 +309,7 @@
         eyebrow: "联系我",
         title: "一起做点东西",
         getInTouch: "保持联系",
-        text: "我目前开放全职 AI/ML 工程岗位 —— 上海或远程 —— 预计 2026 年 12 月毕业后即可到岗（实习或兼职可更早开始）。",
+        text: "我目前开放全职 AI/ML 工程岗位 —— 杭州或上海，亦可远程 —— 预计 2026 年 12 月毕业后即可到岗（实习或兼职可更早开始）。",
         nameLabel: "姓名",
         namePh: "您的姓名",
         emailLabel: "邮箱",

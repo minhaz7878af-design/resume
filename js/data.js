@@ -11,11 +11,11 @@ window.PORTFOLIO = {
     roleLine: "Agentic AI · LLM Systems · Applied Machine Learning",
     headline: "AI Engineer — Agentic AI, LLM Systems & Applied Machine Learning",
     kicker: "M.Eng. Candidate, Zhejiang University · B.Eng., Yunnan University",
-    availability: "Open to full-time AI/ML engineering roles · Shanghai or remote · 2026–2027",
+    availability: "Open to full-time AI/ML engineering roles · Hangzhou / Shanghai / Remote · 2026–2027",
     workAuth:
       "Currently on a student visa · eligible for work-permit conversion after graduation (Dec 2026)",
     languages: "English (fluent) · Mandarin Chinese (working proficiency) · Bengali (native)",
-    location: "Ningbo, Zhejiang, China",
+    location: "Hangzhou, Zhejiang, China",
     email: "minhaz1396@zju.edu.cn",
     phone: "+86 15990259205",
     github: "https://github.com/Minhaz2858",
